@@ -1,16 +1,20 @@
 Package.describe({
   summary: "Easily add responsive side menus to your applications",
-  version: "0.1.0",
+  version: "1.0.0",
   git: "https://github.com/sunkay/easy-side-menu.git"
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.0.1');
-  api.addFiles(['sunkay:easy-side-menu.js', 'sunkay:easy-side-menu.css']);
+  api.use(['templating'],'client');
+
+  api.addFiles('easy-side-menu.html', 'client');
+  api.addFiles(['easy-side-menu.js', 'slideout-menu.css'], 'client');
+ 
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('sunkay:easy-side-menu');
-  api.addFiles('sunkay:easy-side-menu-tests.js');
+  api.addFiles('easy-side-menu-tests.js');
 });
