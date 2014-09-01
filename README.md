@@ -10,7 +10,9 @@ Run:
 
 Add class "slideout-menu-toggle" where you want to add the menu button:
 
+```
 <button type="button" id="btnRespNav" class="btn-navbar navbar-toggle slideout-menu-toggle pull-left" data-toggle="collapse" data-target="#login-navbar-collapse">
+```
 
 This will provide you with a template called slideMenu. Include it in your header html file. 
 
@@ -18,6 +20,7 @@ This will provide you with a template called slideMenu. Include it in your heade
 
 You also need to provide a template called menuItems, which will form the menu elements
 
+```
 <template name="menuItems">
   <div class="slideout-menu">
     <h3>Menu <a href="#" class="slideout-menu-toggle">×</a></h3>
@@ -33,4 +36,4 @@ You also need to provide a template called menuItems, which will form the menu e
   </div>
   <!--/.slideout-menu-->
 </template>
-
+```
