@@ -1,9 +1,13 @@
 //if(Meteor.isClient){
   Template.slideMenu.rendered = function () {
     $(document).ready(function () {
+        // make sure multiple click handlers are not registered to this
+        $('.slideout-menu-toggle').off('click');    
         $('.slideout-menu-toggle').on('click', function(event){
           event.preventDefault();
           event.stopPropagation();
+
+          //console.log("SlideMenu - Click");
 
           // create menu variables
           var slideoutMenu = $('.slideout-menu');
