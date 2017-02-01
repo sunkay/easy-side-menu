@@ -22,7 +22,9 @@
    
             // create a one-time event to close when a user clicks anywhere outside
             $(document).one('touchstart click', function(){
-              slideoutMenu.toggleClass("open");
+              if (slideoutMenu.hasClass("open")) {
+                slideoutMenu.toggleClass("open");
+              }
               slideoutMenu.animate({left: -slideoutMenuWidth}, 250); 
             });
           } else {
